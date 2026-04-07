@@ -50,3 +50,36 @@ After running the full physical design flow, the following metrics were achieved
 │   ├── gds/              # Final GDSII layout file
 │   └── reports/          # Timing, Power, and Area reports
 └── config.json           # OpenLane configuration file
+
+📈 Analysis & Realizations
+Power: At the 130nm node, leakage power is negligible (0.0% of total), meaning the design is highly energy-efficient when idle.
+
+Timing: The "Ripple" effect is clearly visible in the timing reports, where the critical path is dictated by the carry propagation from LSB to MSB.
+
+Physical Design: The final GDSII shows that while the gate length is 130nm, the actual area is dominated by routing and power delivery networks (PDN).
+
+🏁 Future Work
+[ ] Implement a Carry Lookahead Adder (CLA) to compare PPA (Power-Performance-Area).
+
+[ ] Add Register-Input/Register-Output (Sequential) to analyse setup/hold timing.
+
+🤝 Acknowledgments
+Special thanks to the Efabless OpenLane team and Google for providing the open-source tools and PDK that make this project possible.
+
+
+---
+
+### **How to set this up on your computer:**
+
+1. **Create the folders:**
+   ```bash
+   mkdir -p rtl tb docs results/reports results/gds
+Move your files:
+
+Put your .v files in rtl/.
+
+Put your testbench in tb/.
+
+Put your PDF documentation in docs/.
+
+Copy your 1-synthesis... and 2-syn_sta... reports into results/reports/.
