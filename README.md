@@ -51,37 +51,44 @@ After running the full physical design flow, the following metrics were achieved
 │   └── reports/          # Timing, Power, and Area reports
 └── config.json           # OpenLane configuration file
 ```
----
+## 📈 Analysis & Realizations
 
-📈 Analysis & Realizations
-Power: At the 130nm node, leakage power is negligible (0.0% of total), meaning the design is highly energy-efficient when idle.
+**Power**
+At the 130nm node, leakage power is negligible (~0% of total), meaning the design is highly energy-efficient when idle.
 
-Timing: The "Ripple" effect is clearly visible in the timing reports, where the critical path is dictated by the carry propagation from LSB to MSB.
+**Timing**
+The "ripple" effect is clearly visible in the timing reports — the critical path is dictated by carry propagation from LSB to MSB.
 
-Physical Design: The final GDSII shows that while the gate length is 130nm, the actual area is dominated by routing and power delivery networks (PDN).
-
-🏁 Future Work
-[ ] Implement a Carry Lookahead Adder (CLA) to compare PPA (Power-Performance-Area).
-
-[ ] Add Register-Input/Register-Output (Sequential) to analyse setup/hold timing.
-
-🤝 Acknowledgments
-Special thanks to the Efabless OpenLane team and Google for providing the open-source tools and PDK that make this project possible.
-
+**Physical Design**
+The final GDSII shows that while the gate length is 130nm, the actual area is dominated by routing and the power delivery network (PDN).
 
 ---
 
-### **How to set this up on your computer:**
+## 🏁 Future Work
 
-1. **Create the folders:**
-   ```bash
-   mkdir -p rtl tb docs results/reports results/gds
-Move your files:
+- [ ] Implement a Carry Lookahead Adder (CLA) to compare PPA (Power, Performance, Area)
+- [ ] Add registered inputs/outputs (sequential wrapper) to analyse setup/hold timing
 
-Put your .v files in rtl/.
+---
 
-Put your testbench in tb/.
+## ⚙️ Setup
 
-Put your PDF documentation in docs/.
+### 1. Create the directory structure
+```bash
+mkdir -p rtl tb docs results/reports results/gds
+```
 
-Copy your 1-synthesis... and 2-syn_sta... reports into results/reports/.
+### 2. Place your files
+
+| File | Destination |
+| :--- | :--- |
+| RTL source files (`.v`) | `rtl/` |
+| Testbench | `tb/` |
+| PDF documentation | `docs/` |
+| Synthesis & STA reports | `results/reports/` |
+
+---
+
+## 🤝 Acknowledgements
+
+Special thanks to the [Efabless OpenLane](https://github.com/The-OpenROAD-Project/OpenLane) team and Google for providing the open-source tools and PDK that make this project possible.
