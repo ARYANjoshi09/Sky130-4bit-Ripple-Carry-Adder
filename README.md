@@ -25,9 +25,9 @@ After running the complete physical design flow, the following metrics were achi
 | Metric | Value | Status |
 | :--- | :--- | :--- |
 | **Max Frequency** | 320 MHz | ✅ Met |
-| **Setup Slack** | 4.63 ns | ✅ Met |
+| **Setup Slack** | 4.45 ns | ✅ Met |
 | **Hold Slack** | > 0 ns | ✅ Met |
-| **Total Power @ 320 MHz** | 18.0 µW | — |
+| **Total Power @ 320 MHz** | 23.2 µW | — |
 | **Dynamic Power** | 17.98 µW | 99.9% of total |
 | **Leakage Power** | ~100 pW | Negligible |
 | **DRC Status** | Clean | ✅ Verified |
@@ -119,7 +119,7 @@ Ensure you have the following installed:
 mkdir -p rtl tb docs results/reports results/gds
 ```
 
-#### 2. Organize Your Files
+#### 2. Organise Your Files
 
 | File Type | Destination |
 | :--- | :--- |
@@ -146,7 +146,7 @@ gtkwave tb_rca_4bit.vcd &
 #### 4. Run OpenLane RTL-to-GDSII Flow
 
 ```bash
-# Navigate to OpenLane directory
+# Navigate to the OpenLane directory
 cd $OPENLANE_ROOT
 
 # Execute the design flow
