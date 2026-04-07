@@ -51,6 +51,8 @@ After running the full physical design flow, the following metrics were achieved
 │   └── reports/          # Timing, Power, and Area reports
 └── config.json           # OpenLane configuration file
 
+---
+
 📈 Analysis & Realizations
 Power: At the 130nm node, leakage power is negligible (0.0% of total), meaning the design is highly energy-efficient when idle.
 
