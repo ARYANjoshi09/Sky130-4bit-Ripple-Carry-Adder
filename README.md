@@ -10,7 +10,7 @@ This project demonstrates the transition from a structural Verilog description t
 
 ### Key Features
 
-- **Architecture:** Structural modeling (Half Adder → Full Adder → 4-bit RCA)
+- **Architecture:** Structural modeling (Full Adder → 4-bit RCA)
 - **Process Node:** SkyWater 130nm (`sky130_fd_sc_hd` standard cell library)
 - **Design Flow:** Fully automated RTL-to-GDSII using OpenLane
 - **Verification:** Exhaustive self-checking testbench covering all 512 input combinations
