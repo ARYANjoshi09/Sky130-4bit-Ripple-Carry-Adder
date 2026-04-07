@@ -142,14 +142,6 @@ iverilog -o tb_rca_4bit tb/tb_rca_4bit.v rtl/half_adder.v rtl/full_adder.v rtl/r
 gtkwave tb_rca_4bit.vcd &
 ```
 
-**Expected Output:**
-```
-Test 0: a=0000, b=0000, cin=0 → sum=0000, cout=0 ✓
-Test 1: a=0001, b=0001, cin=0 → sum=0010, cout=0 ✓
-Test 2: a=1111, b=0001, cin=0 → sum=0000, cout=1 ✓
-...
-All 512 tests passed! ✅
-```
 
 #### 4. Run OpenLane RTL-to-GDSII Flow
 
@@ -169,7 +161,7 @@ cat reports/6-sta_summary.txt         # Timing summary
 #### 5. Inspect Layout (DRC/LVS)
 
 ```bash
-# Launch Magic for layout inspection
+# Launch KLayout for layout inspection
 magic -d XR results/gds/rca_4bit.gds
 
 # Run DRC check
@@ -203,16 +195,3 @@ Special thanks to:
 ## 📝 License
 
 This project is open-source and available under the **Apache License 2.0** – see the LICENSE file for details.
-
----
-
-## 📧 Contact & Support
-
-For questions, issues, or feature requests:
-
-- **GitHub Issues:** [Report an Issue](https://github.com/ARYANjoshi09/Sky130-4bit-Ripple-Carry-Adder/issues)
-- **Discussions:** [Join the Discussion](https://github.com/ARYANjoshi09/Sky130-4bit-Ripple-Carry-Adder/discussions)
-
----
-
-**Last Updated:** April 2026 | **Status:** Active Development ✅
